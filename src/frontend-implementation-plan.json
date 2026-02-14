@@ -1,0 +1,43 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Clarify Internet Identity-only authentication and document lack of Google login",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Update sign-in UI copy to explicitly state Internet Identity is the only supported authentication method (no Google login).",
+      "acceptanceCriteria": [
+        "In the navbar sign-in button (frontend/src/components/AuthButton.tsx), the unauthenticated label references Internet Identity (e.g., \"Sign In (Internet Identity)\") or otherwise makes it explicit that the sign-in method is Internet Identity.",
+        "In the gated-access sign-in card (frontend/src/routes/RequireAuth.tsx), the descriptive text explicitly says the user will sign in with Internet Identity and does not mention Google login as an available option.",
+        "All user-facing text added/changed is in English and consistent across the app."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AuthButton.tsx",
+          "operation": "modify",
+          "description": "Adjust the unauthenticated button label to explicitly reference Internet Identity (e.g., \"Sign In (Internet Identity)\") while preserving existing Internet Identity login/logout behavior and avoiding changes to immutable auth hook files. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/routes/RequireAuth.tsx",
+          "operation": "modify",
+          "description": "Update the sign-in card copy so it clearly states users will sign in with Internet Identity and does not mention Google login; align button label language with the navbar for consistency. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add a Help page FAQ entry stating Google login is not supported and Internet Identity is the supported sign-in method.",
+      "acceptanceCriteria": [
+        "Help page (frontend/src/pages/HelpPage.tsx) includes a new FAQ accordion item stating Google login is not available and Internet Identity is the supported sign-in method.",
+        "The new FAQ entry is written in clear English and does not instruct users to use any unsupported third-party auth provider."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HelpPage.tsx",
+          "operation": "modify",
+          "description": "Add a new FAQ AccordionItem under the existing FAQ accordion explaining that Google login is not supported and that Internet Identity is the only supported sign-in method, using clear concise English. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

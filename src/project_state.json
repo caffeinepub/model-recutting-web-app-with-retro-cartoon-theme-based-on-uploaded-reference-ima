@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a full model recutting website themed/styled to match a provided reference image.",
+  "architectural_notes": [
+    "Authentication scope expanded to include Google OAuth login (in addition to current Internet Identity approach)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-complete-model-recutting-web-application-with-core-pages-landing-marketing-dashboard-project-list-new-project-upload-editor-recut-project-detail-view-export-and-a-simple-help-about-page",
+      "title": "Create a complete model recutting web application with core pages: Landing/Marketing, Dashboard (project list), New Project (upload), Editor (recut), Project Detail (view/export), and a simple Help/About page.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-authentication-using-internet-identity-and-gate-project-features-create-edit-save-behind-sign-in-while-still-allowing-the-landing-help-pages-to-be-viewed-when-signed-out",
+      "title": "Implement authentication using Internet Identity and gate project features (create/edit/save) behind sign-in while still allowing the Landing/Help pages to be viewed when signed out.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-client-side-3d-model-upload-and-preview-flow-supporting-at-least-glb-gltf-required-and-obj-optional-after-upload-show-the-model-in-a-3d-viewport-with-orbit-controls-and-basic-scene-lighting",
+      "title": "Build a client-side 3D model upload and preview flow supporting at least GLB/GLTF (required) and OBJ (optional). After upload, show the model in a 3D viewport with orbit controls and basic scene lighting.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-model-recutting-in-the-editor-allow-the-user-to-define-a-cut-operation-at-minimum-a-plane-cut-with-position-and-orientation-controls-and-preview-the-result-by-showing-the-two-resulting-pieces-as-separate-selectable-parts",
+      "title": "Implement model “recutting” in the editor: allow the user to define a cut operation (at minimum: a plane cut with position and orientation controls) and preview the result by showing the two resulting pieces as separate selectable parts.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-export-options-for-the-recut-result-allow-downloading-the-resulting-parts-as-files-at-minimum-glb-export-for-each-part",
+      "title": "Add export options for the recut result: allow downloading the resulting parts as files (at minimum: GLB export for each part).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-persist-and-restore-editor-state-save-recut-settings-cut-plane-parameters-and-any-toggles-into-the-backend-project-record-and-restore-them-when-reopening-the-project-so-the-recut-preview-matches-the-saved-state",
+      "title": "Persist and restore editor state: save recut settings (cut plane parameters and any toggles) into the backend project record, and restore them when reopening the project so the recut preview matches the saved state.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-visual-theme-across-the-website-based-on-the-uploaded-reference-image-bold-retro-cartoon-look-warm-yellows-oranges-teal-accents-thick-outlines-playful-typography-studio-production-vibe-and-use-it-consistently-for-layout-buttons-cards-and-headings-avoid-blue-purple-as-primary-colors",
+      "title": "Apply a coherent visual theme across the website based on the uploaded reference image (bold retro cartoon look: warm yellows/oranges, teal accents, thick outlines, playful typography, studio/production vibe) and use it consistently for layout, buttons, cards, and headings (avoid blue/purple as primary colors).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-ux-safeguards-and-limits-appropriate-for-an-internet-computer-canister-app-enforce-a-maximum-upload-size-configurable-and-show-clear-english-error-messaging-when-limits-are-exceeded-or-when-model-parsing-fails",
+      "title": "Add basic UX safeguards and limits appropriate for an Internet Computer canister app: enforce a maximum upload size (configurable) and show clear English error messaging when limits are exceeded or when model parsing fails.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-theme-assets-as-static-files-from-frontend-public-assets-generated-and-use-them-in-the-ui-logo-in-navbar-landing-subtle-background-graphic-pattern-in-landing-editor",
+      "title": "Render generated theme assets as static files from frontend/public/assets/generated and use them in the UI (logo in navbar/landing, subtle background graphic/pattern in landing/editor).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-sign-in-ui-to-clearly-state-that-authentication-is-provided-via-internet-identity-and-that-google-oauth-login-is-not-available-in-this-app-using-concise-english-copy-in-the-existing-sign-in-surfaces-navbar-auth-button-and-the-requireauth-sign-in-card",
+      "title": "Update all sign-in UI to clearly state that authentication is provided via Internet Identity and that Google OAuth login is not available in this app, using concise English copy in the existing sign-in surfaces (navbar auth button and the RequireAuth sign-in card).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-short-faq-entry-to-the-help-page-explaining-that-google-login-is-not-supported-and-that-users-should-use-internet-identity-instead",
+      "title": "Add a short FAQ entry to the Help page explaining that Google login is not supported and that users should use Internet Identity instead.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a full model recutting website (core site pages and functionality).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Apply styling/theme based on the provided reference image across the website.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement backend data models and APIs to store per-user recutting projects (metadata + recut settings) and support CRUD: create project, list projects by caller, get project by id, update project (including recut settings), and delete project.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add Google login (Google OAuth) authentication option in addition to/alongside existing Internet Identity sign-in.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Model recutting web app with retro cartoon theme based on uploaded reference image",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T20:39:47.130Z",
+  "summary": "REQ-11 appears implemented: the navbar AuthButton unauthenticated label explicitly says \"Sign In (Internet Identity)\", and the RequireAuth sign-in card describes signing in with Internet Identity without mentioning Google login. REQ-12 cannot be verified from the provided HelpPage.tsx diff excerpt because the FAQ section is truncated before any new Google-login FAQ item is shown.",
+  "missing_requirements": [
+    {
+      "id": "REQ-12",
+      "requirement": "Add a short FAQ entry to the Help page explaining that Google login is not supported and that users should use Internet Identity instead.",
+      "reason": "The Help page diff is truncated in the FAQ section; the visible portion shows existing FAQ items but does not show a new accordion item about Google login not being supported / using Internet Identity. With the provided evidence, implementation cannot be confirmed.",
+      "evidence": [
+        "frontend/src/pages/HelpPage.tsx (truncated)"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/AuthButton.tsx",
+    "frontend/src/pages/HelpPage.tsx",
+    "frontend/src/routes/RequireAuth.tsx",
+    "project_state.json"
+  ]
+}

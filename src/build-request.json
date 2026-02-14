@@ -1,0 +1,55 @@
+{
+  "kind": "build_request",
+  "title": "Handle request for Google login under Internet Identity-only auth constraints",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Update all sign-in UI to clearly state that authentication is provided via Internet Identity and that Google OAuth login is not available in this app, using concise English copy in the existing sign-in surfaces (navbar auth button and the RequireAuth sign-in card).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Add Google login."
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the navbar sign-in button (frontend/src/components/AuthButton.tsx), the unauthenticated label references Internet Identity (e.g., \"Sign In (Internet Identity)\") or otherwise makes it explicit that the sign-in method is Internet Identity.",
+        "In the gated-access sign-in card (frontend/src/routes/RequireAuth.tsx), the descriptive text explicitly says the user will sign in with Internet Identity and does not mention Google login as an available option.",
+        "All user-facing text added/changed is in English and consistent across the app."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add a short FAQ entry to the Help page explaining that Google login is not supported and that users should use Internet Identity instead.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Add Google login."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Help page (frontend/src/pages/HelpPage.tsx) includes a new FAQ accordion item stating Google login is not available and Internet Identity is the supported sign-in method.",
+        "The new FAQ entry is written in clear English and does not instruct users to use any unsupported third-party auth provider."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not implement Google OAuth / Google Sign-In (third-party authentication) because this app stack only supports Internet Identity for authentication.",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui (immutable paths).",
+    "Backend remains single-actor Motoko; no additional backend services or external auth providers may be introduced."
+  ],
+  "nonGoals": [
+    "Implementing Google OAuth flows (authorization code exchange, token verification, refresh tokens).",
+    "Linking Google accounts to Internet Identity anchors or adding any other third-party identity provider integration."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
