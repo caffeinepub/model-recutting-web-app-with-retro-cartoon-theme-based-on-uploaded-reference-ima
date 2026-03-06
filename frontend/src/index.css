@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Retro cartoon theme - warm yellows/oranges + teal */
+        --background: 0.98 0.05 85;
+        --foreground: 0.25 0.08 35;
+        
+        --card: 0.96 0.06 80;
+        --card-foreground: 0.25 0.08 35;
+        
+        --popover: 0.96 0.06 80;
+        --popover-foreground: 0.25 0.08 35;
+        
+        /* Primary: Bold warm yellow/orange */
+        --primary: 0.75 0.18 65;
+        --primary-foreground: 0.25 0.08 35;
+        
+        /* Secondary: Teal accent */
+        --secondary: 0.65 0.12 195;
+        --secondary-foreground: 0.98 0.05 85;
+        
+        --muted: 0.92 0.04 75;
+        --muted-foreground: 0.50 0.06 40;
+        
+        /* Accent: Bright teal */
+        --accent: 0.70 0.15 190;
+        --accent-foreground: 0.98 0.05 85;
+        
+        --destructive: 0.60 0.22 25;
+        --destructive-foreground: 0.98 0.05 85;
+        
+        --border: 0.30 0.08 35;
+        --input: 0.88 0.05 75;
+        --ring: 0.75 0.18 65;
+        
+        --chart-1: 0.75 0.18 65;
+        --chart-2: 0.70 0.15 190;
+        --chart-3: 0.82 0.20 50;
+        --chart-4: 0.65 0.12 195;
+        --chart-5: 0.78 0.16 75;
+    }
+
+    .dark {
+        --background: 0.22 0.08 35;
+        --foreground: 0.96 0.06 80;
+        
+        --card: 0.28 0.08 38;
+        --card-foreground: 0.96 0.06 80;
+        
+        --popover: 0.25 0.08 36;
+        --popover-foreground: 0.96 0.06 80;
+        
+        /* Primary: Bold warm yellow/orange */
+        --primary: 0.78 0.20 60;
+        --primary-foreground: 0.22 0.08 35;
+        
+        /* Secondary: Teal accent */
+        --secondary: 0.60 0.14 195;
+        --secondary-foreground: 0.96 0.06 80;
+        
+        --muted: 0.32 0.06 40;
+        --muted-foreground: 0.70 0.08 75;
+        
+        /* Accent: Bright teal */
+        --accent: 0.65 0.16 190;
+        --accent-foreground: 0.96 0.06 80;
+        
+        --destructive: 0.65 0.24 25;
+        --destructive-foreground: 0.96 0.06 80;
+        
+        --border: 0.35 0.08 40;
+        --input: 0.32 0.06 40;
+        --ring: 0.78 0.20 60;
+        
+        --chart-1: 0.78 0.20 60;
+        --chart-2: 0.65 0.16 190;
+        --chart-3: 0.85 0.22 50;
+        --chart-4: 0.60 0.14 195;
+        --chart-5: 0.80 0.18 75;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 900;
+        letter-spacing: -0.02em;
+    }
+}
+
+/* Retro thick outline utility */
+.retro-outline {
+    text-shadow: 
+        -3px -3px 0 oklch(var(--foreground)),
+        3px -3px 0 oklch(var(--foreground)),
+        -3px 3px 0 oklch(var(--foreground)),
+        3px 3px 0 oklch(var(--foreground));
+}
+
+.retro-card {
+    border: 4px solid oklch(var(--border));
+    box-shadow: 8px 8px 0 oklch(var(--border) / 0.3);
+}
+
+.retro-button {
+    border: 3px solid oklch(var(--foreground));
+    box-shadow: 4px 4px 0 oklch(var(--foreground) / 0.4);
+    transition: all 0.1s ease;
+}
+
+.retro-button:hover:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 oklch(var(--foreground) / 0.4);
+}
+
+.retro-button:active:not(:disabled) {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 oklch(var(--foreground) / 0.4);
+}
+
+/* 3D viewport container */
+.viewport-container {
+    border: 4px solid oklch(var(--border));
+    background: oklch(0.15 0.02 220);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}

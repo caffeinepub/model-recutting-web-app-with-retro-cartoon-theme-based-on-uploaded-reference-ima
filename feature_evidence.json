@@ -1,0 +1,44 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-all-sign-in-ui-to-clearly-state-that-authentication-is-provided-via-internet-identity-and-that-google-oauth-login-is-not-available-in-this-app-using-concise-english-copy-in-the-existing-sign-in-surfaces-navbar-auth-button-and-the-requireauth-sign-in-card",
+      "featureTitle": "Update all sign-in UI to clearly state that authentication is provided via Internet Identity and that Google OAuth login is not available in this app, using concise English copy in the existing sign-in surfaces (navbar auth button and the RequireAuth sign-in card).",
+      "files": [
+        "frontend/src/components/AuthButton.tsx",
+        "frontend/src/routes/RequireAuth.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-short-faq-entry-to-the-help-page-explaining-that-google-login-is-not-supported-and-that-users-should-use-internet-identity-instead",
+      "featureTitle": "Add a short FAQ entry to the Help page explaining that Google login is not supported and that users should use Internet Identity instead.",
+      "files": [
+        "frontend/src/pages/HelpPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

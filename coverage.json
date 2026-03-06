@@ -1,0 +1,53 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T20:39:47.133Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-11",
+        "summary": "Update all sign-in UI to clearly state that authentication is provided via Internet Identity and that Google OAuth login is not available in this app, using concise English copy in the existing sign-in surfaces (navbar auth button and the RequireAuth sign-in card).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/AuthButton.tsx",
+          "frontend/src/routes/RequireAuth.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/AuthButton.tsx",
+          "frontend/src/routes/RequireAuth.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Add a short FAQ entry to the Help page explaining that Google login is not supported and that users should use Internet Identity instead.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HelpPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HelpPage.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/AuthButton.tsx",
+    "frontend/src/pages/HelpPage.tsx",
+    "frontend/src/routes/RequireAuth.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
